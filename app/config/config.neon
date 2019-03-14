@@ -13,4 +13,5 @@ session:
 
 services:
 	router: App\RouterFactory::createRouter
+	- App\Models\Translator
 	- App\Components\Forms\TranslatorForm
