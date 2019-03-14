@@ -27,6 +27,11 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
         $form = $this->translatorForm->create();
         $form->onSuccess[] = function (UI\Form $form) {
             $this->setTranslation($this->translatorForm->processForm($form));
+            if ($this->isAjax()) {
+                $this->redrawControl("translator");
+			} else {
+            	$this->redirect("this");
+			}
         };
         return $form;
     }
