@@ -3,6 +3,7 @@
 namespace App\Components\Forms;
 
 use Nette\Application\UI;
+use App\Models\Translator;
 
 class TranslatorForm extends UI\Control
 {
@@ -26,6 +27,8 @@ class TranslatorForm extends UI\Control
     public function processForm($form) : string
     {
         $values = $form->getValues(true);
-        return $values["input"];
+        $translator = new Translator();
+        $translator->setInput($values["input"]);
+        return $translator->translate();
     }
 }
