@@ -19,19 +19,19 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
         $this->template->translation = $this->translation;
     }
 
-	/**
-	 * @return UI\Form Generated form from component
-	 */
-	protected function createComponentTranslatorForm()
+    /**
+     * @return UI\Form Generated form from component
+     */
+    protected function createComponentTranslatorForm()
     {
         $form = $this->translatorForm->create();
         $form->onSuccess[] = function (UI\Form $form) {
             $this->setTranslation($this->translatorForm->processForm($form));
             if ($this->isAjax()) {
                 $this->redrawControl("translator");
-			} else {
-            	$this->redirect("this");
-			}
+            } else {
+                $this->redirect("this");
+            }
         };
         return $form;
     }

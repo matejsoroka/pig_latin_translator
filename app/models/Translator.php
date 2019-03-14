@@ -25,10 +25,10 @@ class Translator {
         return $this->input;
     }
 
-	/**
-	 * @return string Translated english word into pig latin
-	 */
-	public function translate() : string
+    /**
+     * @return string Translated english word into pig latin
+     */
+    public function translate() : string
     {
         $input = $this->getInput();
         $index = $this->getFirstVowelIndex($input);
@@ -39,22 +39,22 @@ class Translator {
         } else {
             $input .= "'" . $this->getRandomConsonant() . $this->syllable;
         }
-		return $input;
+        return $input;
     }
 
-	/**
-	 * @return string Random consonant
-	 */
-	private function getRandomConsonant() : string
-	{
-		return strtolower($this->consonants[rand(0, count($this->consonants) - 1)]);
-	}
+    /**
+     * @return string Random consonant
+     */
+    private function getRandomConsonant() : string
+    {
+        return strtolower($this->consonants[rand(0, count($this->consonants) - 1)]);
+    }
 
-	/**
-	 * @param $word string english word
-	 * @return int position of first vowel
-	 */
-	private function getFirstVowelIndex(string $word) : int
+    /**
+     * @param $word string english word
+     * @return int position of first vowel
+     */
+    private function getFirstVowelIndex(string $word) : int
     {
         $i = 0;
         foreach (str_split($word) as $char) {

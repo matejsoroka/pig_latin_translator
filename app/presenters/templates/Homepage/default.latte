@@ -1,12 +1,12 @@
 {block content}
-	<h1 class="text-center">Pig Latin Translator</h1>
-	{form translatorForm}
-		<div class="form-group">
-			<input class="form-control" n:name="input"/>
-		</div>
-		<button class="btn btn-primary w-100 ajax" n:name="send"/>
-	{/form}
-	<div class="result text-center" n:snippet="translator">
-		<p>{$translation}</p>
-	</div>
+    <h1 class="text-center">Pig Latin Translator</h1>
+    {form translatorForm}
+        <div class="form-group">
+            <input class="form-control" n:name="input"/>
+        </div>
+        <button class="btn btn-primary w-100 ajax" n:name="send"/>
+    {/form}
+    <div class="result text-center" n:snippet="translator">
+        <p>{$translation}</p>
+    </div>
 {/block}
