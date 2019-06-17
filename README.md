@@ -3,4 +3,4 @@ For words that begin with consonant sounds, all letters before the initial vowel
 [More about Pig Latin](https://en.wikipedia.org/wiki/Pig_Latin?oldformat=true).
 
 ## How to run
-Clone project and install back-end depencencies via `composer` in root directory and front-end dependencies in www/ directory via `npm`. Configure your server root directory into www/
+Clone project and install back-end depencencies via `composer` in root directory and front-end dependencies in www/ directory via `npm`. Configure your server root directory into www/. Also create file `/app/config/config.local.neon` from template file `/app/config/config.local.neon.template`
