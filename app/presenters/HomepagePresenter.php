@@ -2,19 +2,20 @@
 
 namespace App\Presenters;
 
+use App\Components\Forms\TranslatorForm;
 use Nette;
 use Nette\Application\UI;
 
 final class HomepagePresenter extends Nette\Application\UI\Presenter
 {
 
-    /** @var \App\Components\Forms\TranslatorForm @inject */
+    /** @var TranslatorForm @inject */
     public $translatorForm;
 
     /** @var string translated result */
     private $translation;
 
-    public function renderDefault()
+    public function renderDefault() : void
     {
         $this->template->translation = $this->translation;
     }
@@ -22,7 +23,7 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
     /**
      * @return UI\Form Generated form from component
      */
-    protected function createComponentTranslatorForm()
+    protected function createComponentTranslatorForm() : UI\Form
     {
         $form = $this->translatorForm->create();
         $form->onSuccess[] = function (UI\Form $form) {

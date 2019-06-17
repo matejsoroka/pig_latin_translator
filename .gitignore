@@ -3,3 +3,5 @@ temp
 vendor
 app/config/config.local.neon
 www/node_modules
+.idea/
+app/bootstrap\.php
