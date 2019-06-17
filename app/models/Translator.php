@@ -12,7 +12,7 @@ class Translator {
     /**
      * @param string $input english word
      */
-    public function setInput(string $input)
+    public function setInput(string $input) : void
     {
         $this->input = $input;
     }
