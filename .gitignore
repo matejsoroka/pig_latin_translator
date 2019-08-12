@@ -4,4 +4,5 @@ vendor
 app/config/config.local.neon
 www/node_modules
 .idea/
-app/bootstrap\.php
+app/bootstrap.php
+www/package-lock\.json
